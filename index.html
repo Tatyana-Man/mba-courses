@@ -35,6 +35,23 @@
     .update-date { margin-top: 14px !important; margin-bottom: 14px !important; padding: 16px !important; text-align: center !important; font-weight: 600 !important; }
   </style> 
 
+
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Получаем все ссылки на странице
+    let links = document.querySelectorAll("a[href]");
+
+    links.forEach(function (link) {
+        // Проверяем, является ли ссылка внешней
+        if (link.hostname !== window.location.hostname) {
+            link.setAttribute("target", "_blank");
+            link.setAttribute("rel", "noopener noreferrer");
+            link.classList.add("external-link"); // Добавляем класс для стилей
+        }
+    });
+});
+</script>
+	
 </head>
 <body>
   <header>
@@ -1415,6 +1432,11 @@
         document.getElementById("update-date").textContent = getLastWednesday();
     });
 </script>
+
+
+
+
+	  
     
     </footer>
 </body>

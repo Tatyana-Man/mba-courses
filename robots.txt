@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mba-courses.vercel.app/sitemap.xml
